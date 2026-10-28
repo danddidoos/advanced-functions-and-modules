@@ -46,3 +46,5 @@ def write_long_words(input_file="dict.txt", output_file = "long_words.txt"):
                     outfile.write(word + "\n")
     except FileNotFoundError:
         print(f"Error: The file '{input_file}' was not found.")
+
+write_long_words()
