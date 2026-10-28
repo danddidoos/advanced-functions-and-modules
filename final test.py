@@ -36,3 +36,13 @@ def filename():
 
 filename()
 
+#final task. writing all the words in dict.txt to a new file that have letter count >3
+def write_long_words(input_file="dict.txt", output_file = "long_words.txt"):
+    try:
+        with open(input_file, "r") as infile, open(output_file, "w") as outfile:
+            for line in infile:
+                word = line.strip()
+                if len(word) > 3:
+                    outfile.write(word + "\n")
+    except FileNotFoundError:
+        print(f"Error: The file '{input_file}' was not found.")
